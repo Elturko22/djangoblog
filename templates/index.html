@@ -1,0 +1,14 @@
+{% extends "layout.html" %} {% block body %}
+<div class="jumbotron text-center">
+    <h3>Berk'in Bloğuna Hoşgeldiniz</h3>
+    <p>Bu blogda kendi kişisel hayatım ve özgeçmişim yer almaktadır.Ayrıca gündemdeki teknolojik gelişmeleri bu blogta bulabilirsiniz.</p>
+</div>
+
+
+<p>
+    {% if request.user.is_authenticated %} Giriş Yapılmış, {{request.user.username}} {% else %} Giriş Yapılmamış. {% endif %}
+
+
+
+</p>
+{% endblock body %}
